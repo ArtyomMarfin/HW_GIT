@@ -1,0 +1,51 @@
+@artyommarfin
+Linux terminal (GitBash) commands
+
+Нужно уметь делать все пункты задания.
+
+1) Посмотреть где я - pwd
+2) Создать папку - mkdir foldername
+3) Зайти в папку - cd foldername
+4) Создать 3 папки - mkdir -p foldername1 foldername2 foldername3
+5) Зайти в любоую папку - cd foldername1
+6) Создать 5 файлов (3 txt, 2 json) - touch 1.txt 2.txt 3.txt 1.json 2.json
+7) Создать 3 папки - mkdir -p fn1 fn2 fn3
+8. Вывести список содержимого папки - ls -la
+9) + Открыть любой txt файл - cat > 1.txt
+10) + написать туда что-нибудь, любой текст - fgh
+11) + сохранить и выйти - Ctrl + C
+12) Выйти из папки на уровень выше - cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку - mv C:/QA_Project/ArtyomMarfin_QA/foldername1/1.txt C:/QA_Project/ArtyomMarfin_QA/foldername1/2.txt C:/QA_Project/ArtyomMarfin_QA/foldername3
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку - cp C:/QA_Project/ArtyomMarfin_QA/foldername1/2.txt C:/QA_Project/ArtyomMarfin_QA/foldername1/3.txt C:/QA_Project/ArtyomMarfin_QA/foldername2
+
+15) Найти файл по имени - find . -name "2.txt"
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает - tail-f tail.txt
+17) вывести несколько первых строк из текстового файла - head -2 C:/QA_Project/ArtyomMarfin_QA/foldername2/1.txt
+18) вывести несколько последних строк из текстового файла - tail -3 C:/QA_Project/ArtyomMarfin_QA/foldername2/1.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает - less C:/QA_Project/ArtyomMarfin_QA/foldername2/1.txt
+20) вывести дату и время - date
+=========
+
+Задание *
+1) Отправить http запрос на сервер http://162.55.220.72:5005/terminal-hw-request
+- curl 'http://162.55.220.72:5005/terminal-hw-request'
+- curl 'http://162.55.220.72:5005/get_method?name=Artyom_Marfin&age=36'
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+touch script1.txt
+cat > script1.txt
+#!/bin/bash
+
+cd C:/QA_Project/ArtyomMarfin_QA/foldername2
+mkdir -p  foldername6 foldername5 foldername4
+cd foldername4
+touch 6.txt 5.txt 4.txt 4.json 3.json
+mkdir -p fn6 fn5 fn4
+ls -la
+mv C:/QA_Project/ArtyomMarfin_QA/foldername2/foldername4/5.txt C:/QA_Project/ArtyomMarfin_QA/foldername2/foldername4/6.txt C:/QA_Project/ArtyomMarfin_QA/foldername2/foldername5
+
+chmod +x ./script1.txt
+./script1.txt
+
